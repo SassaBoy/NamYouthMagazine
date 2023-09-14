@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with FoodHut landing page.">
+    <meta name="author" content="Devcrud">
+    <title>YouthVibe</title>
+   
+    <!-- font icons -->
+    <link rel="stylesheet" href="/vendors/themify-icons/css/themify-icons.css">
+
+    <link rel="stylesheet" href="/vendors/animate/animate.css">
+
+    <!-- Bootstrap + FoodHut main styles -->
+	<link rel="stylesheet" href="/css/foodhut.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    
+    <!-- Navbar -->
+    <nav class="custom-navbar navbar navbar-expand-lg navbar-dark fixed-top" data-spy="affix" data-offset-top="10">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallary">Trending</a>
+                </li>
+              
+               
+               
+               
+            </ul>
+            <!-- You can leave the commented-out logo code as it is or replace it with your magazine's logo -->
+            
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#fashion">Fashion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#featured">Featured</a>
+                </li>
+              
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <% if (isLoggedIn) { %>
+                        <a href="/signout" class="btn btn-primary ml-xl-4">Sign Out</a>
+                    <% } else { %>
+                        <a href="/signup" class="btn btn-primary ml-xl-4">Sign Up</a>
+                    <% } %>
+                </li>
+                
+                
+                
+            </ul>
+            
+        </div>
+    </nav>
+    <!-- header -->
+    <header id="home" class="header">
+        <div class="overlay text-white text-center">
+            <h1 class="display-2 font-weight-bold my-3">YouthVibe Magazine</h1>
+            <!-- <h2 class="display-4 mb-5">A Namibian Youth Magazine aimed at empowering&amp; young people</h2> -->
+            <a class="btn btn-lg btn-primary" href="#gallary">Latest</a>
+        </div>
+    </header>
+
+    <!--  About Section  -->
+    <div id="about" class="container-fluid wow fadeIn" id="about"data-wow-duration="1.5s">
+        <div class="row">
+            <div class="col-lg-6 has-img-bg"></div>
+            <div class="col-lg-6">
+                <div class="row justify-content-center">
+                    <div class="col-sm-8 py-5 my-5">
+                        <h2 class="mb-4">About Us</h2>
+                        <p>Welcome to YouthVibe Magazine, your go-to source for all things related to youth culture, creativity, and inspiration.</p>
+                        <p>At YouthVibe Magazine, we are passionate about empowering young minds and providing a platform for them to express their unique voices. Our mission is to:</p>
+                        <ul>
+                            <li>Champion the creativity and innovation of today's youth.</li>
+                            <li>Share stories, experiences, and perspectives that resonate with young people.</li>
+                            <li>Provide a space for young writers, artists, and creators to showcase their talents.</li>
+                        </ul>
+                        <p>Our team is dedicated to curating content that informs, inspires, and entertains our readers. We believe in the power of youth to shape the future and create positive change in the world.</p>
+                        <p><b>Join us on this exciting journey as we celebrate the energy, enthusiasm, and potential of the youth community.</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!--  gallary Section  -->
+    <div id="gallary" class="text-center bg-dark text-light has-height-md middle-items wow fadeIn">
+        <h2 class="section-title">Trending</h2>
+    </div>
+    <div class="gallary row">
+    <!-- Gallary Section with Zoom Effect -->
+    <div class="gallary row">
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/imgs/blog3.jpg" alt="Created by Deon" class="gallary-img">
+            <a href="#" class="gallary-overlay zoom-link">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/imgs/blog4.jpg" alt="Created by Deon" class="gallary-img">
+            <a href="#" class="gallary-overlay zoom-link">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/imgs/blog5.jpg" alt="Created by Deon" class="gallary-img">
+            <a href="#" class="gallary-overlay zoom-link">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/imgs/blog6.jpg" alt="Created by Deon" class="gallary-img">
+            <a href="#" class="gallary-overlay zoom-link">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/imgs/blog7.jpg" alt="Created by Deon" class="gallary-img">
+            <a href="#" class="gallary-overlay zoom-link">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/imgs/blog9.jpg" alt="Created by Deon" class="gallary-img">
+            <a href="#" class="gallary-overlay zoom-link">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/imgs/blog10.jpg" alt="Created by Deon" class="gallary-img">
+            <a href="#" class="gallary-overlay zoom-link">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="/imgs/blog11.jpg" alt="Created by Deon" class="gallary-img">
+            <a href="#" class="gallary-overlay zoom-link">
+                <i class="gallary-icon ti-plus"></i>
+            </a>
+        </div>
+    </div>
+
+    </div>
+
+     
+
+        </div>
+    </div>
+
+
+<section class="fashion-section fadeIn" id="fashion">
+    <div class="container">
+        <h2 class="section-title">Fashion Trends</h2>
+        <div class="fashion-items row">
+            <div class="col-md-4 fashion-item">
+                <img src="/imgs/evening.jpg" alt="Fashion Item 1" class="item-image">
+                <h3 class="item-title">Elegant Evening Wear</h3>
+                <p class="item-description">Discover the latest in elegant evening wear that will make you shine at any event.</p>
+                <a href="#" class="item-button">View Details</a>
+            </div>
+            <div class="col-md-4 fashion-item">
+                <img src="/imgs/casual.jpg" alt="Fashion Item 2" class="item-image">
+                <h3 class="item-title">Casual Chic</h3>
+                <p class="item-description">Stay stylish and comfortable with our collection of casual chic outfits.</p>
+                <a href="#" class="item-button">View Details</a>
+            </div>
+            <div class="col-md-4 fashion-item">
+                <img src="/imgs/access.jpg" alt="Fashion Item 3" class="item-image">
+                <h3 class="item-title">High-End Accessories</h3>
+                <p class="item-description">Complete your look with our high-end accessories, from handbags to jewelry.</p>
+                <a href="#" class="item-button">View Details</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+<!-- Featured Articles Section -->
+<section class="featured-articles-section fadeIn" id="featured">
+    <div class="container">
+        <h2 class="section-title">Featured Articles</h2>
+        <div class="featured-articles row">
+            <div class="col-md-4 featured-article">
+                <img src="/imgs/photography.jpg" alt="Featured Article 1">
+                <h3 class="article-title">Exploring the Art of Photography</h3>
+                <p class="article-description">Learn the secrets behind capturing stunning photographs that tell stories.</p>
+                <a href="#" class="article-button">Read More</a>
+            </div>
+            <div class="col-md-4 featured-article">
+                <img src="/imgs/healthy.jpg" alt="Featured Article 2">
+                <h3 class="article-title">Healthy Living: Mind and Body</h3>
+                <p class="article-description">Discover tips and practices for maintaining a healthy mind and body.</p>
+                <a href="#" class="article-button">Read More</a>
+            </div>
+            <div class="col-md-4 featured-article">
+                <img src="/imgs/culinary.jpg" alt="Featured Article 3">
+                <h3 class="article-title">Culinary Delights: Recipes from Around the World</h3>
+                <p class="article-description">Savor the flavors of international cuisine with these delicious recipes.</p>
+                <a href="#" class="article-button">Read More</a>
+            </div>
+          
+        </div>
+    </div>
+</section>
+
+    <!-- CONTACT Section  -->
+    <section class="contact-section fadeIn" id="contact">
+        <div class="contact-container">
+            <div class="contact-form">
+                <h1>Contact Us</h1>
+                <form action="/contact" method="POST">
+                    <div class="input-container">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="subkect">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+
+    
+    
+    
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2023 YourWebsiteName. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+	<!-- core  -->
+    <script src="/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap affix -->
+    <script src="/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- wow.js -->
+    <script src="/vendors/wow/wow.js"></script>
+    
+    <!-- google maps -->
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script> -->
+
+    <!-- FoodHut js -->
+    <script src="/js/foodhut.js"></script>
+
+   
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const zoomLinks = document.querySelectorAll(".zoom-link");
+        
+                zoomLinks.forEach((link) => {
+                    link.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        const image = link.previousElementSibling; // Get the image element
+                        image.classList.toggle("zoomed"); // Toggle a class to apply the zoom effect
+                    });
+                });
+            });
+        
+        
+    </script>
+
+</body>
+</html>

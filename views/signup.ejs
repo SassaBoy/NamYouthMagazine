@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+   
+    
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .signup-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .signup-button {
+            background-color: #ff214f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .login-link {
+            margin-top: 20px;
+        }
+
+        .login-link a {
+            text-decoration: none;
+            color: #ff214f;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 480px) {
+            .signup-container {
+                width: 90%;
+            }
+        }
+        /* CSS to style the error message container */
+        .error-message-container {
+            position: fixed; /* Fixed position at the top */
+            margin-left: -45px;
+            margin-top: -500px;
+            width: 100%; /* Full width */
+       
+            color: red; /* Text color for error message */
+            text-align: center; /* Center-align text */
+            padding: 10px 0; /* Add padding for spacing */
+        }
+    
+        /* CSS for styling the error message text */
+        .error-message {
+            /* You can further style the error message text here */
+        }
+    </style>
+</head>
+<body>
+          <!-- Add this block to display the error message -->
+<!-- Add the error message div at the top of the signup container -->
+    <!-- Error message container positioned at the top -->
+    <div class="error-message-container">
+        <% if (emailInUseError) { %>
+            <div class="error-message">
+                <%= emailInUseError %>
+            </div>
+            <script>
+                setTimeout(function() {
+                    document.querySelector('.error-message-container').style.display = 'none';
+                }, 3000); // Hide the error message after 3 seconds (adjust the time as needed)
+            </script>
+        <% } %>
+    </div>
+    
+    
+    <div class="signup-container fadeIn">
+        <h2>Sign Up</h2>
+  
+        <form action="/api/signup" method="POST">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="signup-button">Sign Up</button>
+        </form>
+
+        <div class="login-link">
+            <p>Already have an account? <a href="/login">Log In</a></p>
+        </div>
+    </div>
+
+    	<!-- core  -->
+        <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+        <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    
+        <!-- bootstrap affix -->
+        <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    
+        <!-- wow.js -->
+        <script src="assets/vendors/wow/wow.js"></script>
+   
+            <!-- JavaScript to show/hide the error message container -->
+    <script>
+           // Function to check if the page has been refreshed
+           function isPageRefreshed() {
+            return performance.navigation.type === 1;
+        }
+
+        // Check if the error message exists in the DOM
+        const errorMessage = document.querySelector('.error-message');
+        
+        // If the page is not refreshed and the error message exists, show it and set a timer to hide it
+        if (!isPageRefreshed() && errorMessage) {
+            const errorContainer = document.querySelector('.error-message-container');
+            
+            // Show the error message container
+            errorContainer.style.display = 'block';
+            
+            // Hide the error message after a delay (e.g., 5 seconds)
+            setTimeout(function() {
+                errorContainer.style.display = 'none';
+            }, 5000); // 5000 milliseconds (5 seconds)
+        }
+    
+    </script>
+</body>
+</html>
